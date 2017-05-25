@@ -1,13 +1,13 @@
 {
-  "name": "LeeShop",
-  "version": "1.0.0.1",
+  "name": "leeshop",
+  "version": "1.0.0",
   "description": "this is demo shop created by nodejs",
   "main": "index.js",
   "repository": "https://github.com/nguyenlyminhman/LeeShop.git",
   "author": "nguyenlyminhman <nguyenlyminhman@gmail.com>",
-  "license": "private",
+  "license": "ok man",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
