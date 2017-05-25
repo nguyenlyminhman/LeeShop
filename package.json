@@ -6,6 +6,10 @@
   "repository": "https://github.com/nguyenlyminhman/LeeShop.git",
   "author": "nguyenlyminhman <nguyenlyminhman@gmail.com>",
   "license": "private",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
   "dependencies": {
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.2",
