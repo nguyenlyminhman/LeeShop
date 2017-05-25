@@ -7,4 +7,4 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => res.render('home'));
 
-app.listen( process.env.PORT || 3000, (req, res) => { console.log('Server is running !!!') });
+app.listen( process.env.PORT || 3000, (req, res) => console.log('Server is running !!!'));
