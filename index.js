@@ -15,3 +15,6 @@ app.get('/mens', (req, res) => res.render('mens'));
 app.get('/womens', (req, res) => res.render('womens'));
 app.get('/single', (req, res) => res.render('single'));
 app.get('/other', (req, res) => res.render('other'));
+
+
+app.get('/manager', (req, res) => res.render('./manager/index'));
