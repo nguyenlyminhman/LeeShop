@@ -15,9 +15,10 @@ const pool = new pg.Pool(config);
 //query function using to get data from PG
 function queryDB(sqlString, arrData) {
     return new Promise((resolve, reject) => {
-        pool.connect((err, client) => {
+        pool.connect((err, client, done) => {
             if (err) return reject(err);
             client.query(sqlString, arrData, (errQuery, result) => {
+                done(errQuery);
                 if (errQuery) return reject(errQuery);
                 resolve(result);
             });
@@ -25,4 +26,7 @@ function queryDB(sqlString, arrData) {
     });
 }
 
-module.exports = queryDB;
+// queryDB('select * from "category"', [])
+// .then(data => console.log(data.rows))
+// .catch(err => console.log(err + ''));
+ module.exports = queryDB;
