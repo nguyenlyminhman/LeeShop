@@ -34,6 +34,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--trang header nam o day-->
 	<!--header.ejs-->
 	<% include header %>
+	<% data.forEach(e=>{ %>
+						<li>
+								<%= e.cateid %>
+							<li>
+							<li>
+								<%= e.catename %>
+							</li>
+						<% }) %>
 		<!-- start slider -->
 		<!--banner.ejs-->
 		<% include banner %>

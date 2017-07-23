@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
+const Category = require('./model/Category');
+
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.static('public'));
 app.use('admin', express.static('public/admin'));
 
 app.listen(process.env.PORT || 3000, () => console.log('Server is running !!!'));
+// app.get('/', (req, res) =>{});
 app.get('/', (req, res) => res.render('home'));
 //dieu hướng phần customer
 app.get('/login', (req, res) => res.render('login'));

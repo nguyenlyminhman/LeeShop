@@ -18,7 +18,7 @@ function queryDB(sqlString, arrData) {
         pool.connect((err, client, done) => {
             if (err) return reject(err);
             client.query(sqlString, arrData, (errQuery, result) => {
-                done(errQuery);
+                done();
                 if (errQuery) return reject(errQuery);
                 resolve(result);
             });
