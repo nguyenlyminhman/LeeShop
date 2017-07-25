@@ -1,6 +1,6 @@
 const queryDB = require('../utils/Database');
 
-class Manager {
+class Admin {
     constructor(id, email, password, fullname) {
         this.id = id;
         this.email = email;
@@ -21,8 +21,7 @@ class Manager {
     }
 
     addNewManager() {
-        const sql = 'insert into public."manager" (email, password, fullname) values ($1, $2, $3)';
+        const sql = 'insert into public."manager" (email, password, fname, lname) values ($1, $2, $3, $4)';
         return queryDB(sql, [this.email, this.password, this.fullname]);
-
     }
 }
